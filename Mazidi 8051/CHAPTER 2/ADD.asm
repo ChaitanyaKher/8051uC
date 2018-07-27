@@ -1,0 +1,5 @@
+ORG 0000H
+MOV A, #25H;
+MOV R2, #34H;
+ADD A,R2;
+END
