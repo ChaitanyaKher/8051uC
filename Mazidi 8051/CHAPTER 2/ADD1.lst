@@ -10,18 +10,23 @@ ASEM-51 V1.3                                         Copyright (c) 2002 by W.W. 
 
 
 
-	Source File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD.asm
-	Object File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD.hex
-	List File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD.lst
+	Source File:	C:\Users\Chaitanya\Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD1.asm
+	Object File:	C:\Users\Chaitanya\Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD1.hex
+	List File:	C:\Users\Chaitanya\Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD1.lst
 
 
 
  Line  I  Addr  Code            Source
 
-    1:		N      0200	ORG 200H
-    2:	  0200	41 42 43 31	MYDATA: DB "ABC123"
-	  0204	32 33
-    3:				END
+    1:		N      0000	ORG 000H
+    2:	  0000	7D 25		MOV R5,#25H
+    3:	  0002	7F 24		MOV R7,#24H
+    4:	  0004	74 00		MOV A,#0
+    5:	  0006	2D		ADD A,R5
+    6:	  0007	2F		ADD A,R7
+    7:	  0008	24 12		ADD A,#12H
+    8:	  000A	80 FE		HERE:SJMP HERE
+    9:				END
 
 
 
@@ -63,6 +68,7 @@ EX1				  BIT	      AA
 EXTI0				  CODE	    0003
 EXTI1				  CODE	    0013
 F0				  BIT	      D5
+HERE				  CODE	    000A	   8
 IE				  DATA	      A8
 IE0				  BIT	      89
 IE1				  BIT	      8B
@@ -71,7 +77,6 @@ INT1				  BIT	      B3
 IP				  DATA	      B8
 IT0				  BIT	      88
 IT1				  BIT	      8A
-MYDATA				  CODE	    0200	   2
 OV				  BIT	      D2
 P				  BIT	      D0
 P0				  DATA	      80

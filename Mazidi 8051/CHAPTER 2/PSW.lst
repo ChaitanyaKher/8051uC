@@ -10,18 +10,18 @@ ASEM-51 V1.3                                         Copyright (c) 2002 by W.W. 
 
 
 
-	Source File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD.asm
-	Object File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD.hex
-	List File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\ADD.lst
+	Source File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\PSW.asm
+	Object File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\PSW.hex
+	List File:	C:\Users\Chaitanya\Desktop\Unused Desktop\8051uC\8051uC\Mazidi 8051\CHAPTER 2\PSW.lst
 
 
 
  Line  I  Addr  Code            Source
 
-    1:		N      0200	ORG 200H
-    2:	  0200	41 42 43 31	MYDATA: DB "ABC123"
-	  0204	32 33
-    3:				END
+    1:		N      0000	ORG 000H
+    2:	  0000	FC 05 76 1C	DB 0FCH,05H,76H,28
+    3:	  0004	53 41 4D	DB "SAM"
+    4:				END
 
 
 
@@ -71,7 +71,6 @@ INT1				  BIT	      B3
 IP				  DATA	      B8
 IT0				  BIT	      88
 IT1				  BIT	      8A
-MYDATA				  CODE	    0200	   2
 OV				  BIT	      D2
 P				  BIT	      D0
 P0				  DATA	      80
@@ -96,6 +95,7 @@ RXD				  BIT	      B0
 SBUF				  DATA	      99
 SCON				  DATA	      98
 SINT				  CODE	    0023
+SM0				  BIT	      9F
 
 ASEM-51 V1.3                                         Copyright (c) 2002 by W.W. Heinz                                         PAGE 3
 
@@ -103,7 +103,6 @@ ASEM-51 V1.3                                         Copyright (c) 2002 by W.W. 
 
 SYMBOL				  TYPE     VALUE	LINE
 ------------------------------------------------------------
-SM0				  BIT	      9F
 SM1				  BIT	      9E
 SM2				  BIT	      9D
 SP				  DATA	      81
